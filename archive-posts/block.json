@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "clarity/archive-posts",
+	"apiVersion": 3,
+	"title": "Clarity Archive Post Items",
+	"parent": [
+		"clarity/archive-feed",
+		"core/columns",
+		"core/column"
+	],
+	"textdomain": "cty",
+	"category": "clarity-blocks",
+	"icon": "grid-view",
+	"keywords": [
+		"clarity",
+		"feed",
+		"archive",
+		"post",
+		"items"
+	],
+	"supports": {
+		"anchor": true,
+		"html": false,
+		"multiple": true
+	},
+	"attributes": {
+		"templateSingle": {
+			"type": "string",
+			"default": "partials/card-post-item"
+		},
+		"templateNone": {
+			"type": "string",
+			"default": "partials/archive-no-results"
+		},
+		"columnsCount": {
+			"type": "number",
+			"default": 3
+		},
+		"inheritedCPTs": {
+			"type": "array"
+		}
+	},
+	"style": "cty-archive-posts-style",
+	"render": "file:./render.php"
+}

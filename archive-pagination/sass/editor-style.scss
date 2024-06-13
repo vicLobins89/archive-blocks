@@ -1,0 +1,8 @@
+.pagination {
+	.page-numbers {
+		&.current {
+			background-color: var(--wp--preset--color--primary) !important;
+			color: #ffffff !important;
+		}
+	}
+}

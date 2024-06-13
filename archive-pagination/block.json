@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "clarity/archive-pagination",
+	"apiVersion": 3,
+	"title": "Clarity Archive Pagination",
+	"parent": [
+		"clarity/archive-feed",
+		"core/columns",
+		"core/column"
+	],
+	"textdomain": "cty",
+	"category": "clarity-blocks",
+	"icon": "editor-ol",
+	"keywords": [
+		"clarity",
+		"feed",
+		"archive",
+		"pagination"
+	],
+	"supports": {
+		"anchor": true,
+		"align": [
+			"left",
+			"right",
+			"center"
+		],
+		"html": false,
+		"multiple": false
+	},
+	"attributes": {
+		"paginationType": {
+			"type": "string",
+			"default": "pagination"
+		},
+		"template": {
+			"type": "string",
+			"default": "partials/archive-pagination"
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Load More"
+		}
+	},
+	"style": "cty-archive-pagination-style",
+	"editorStyle": "cty-archive-pagination-editor-style",
+	"render": "file:./render.php"
+}

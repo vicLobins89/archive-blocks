@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "clarity/archive-filter",
+	"apiVersion": 3,
+	"title": "Clarity Archive Filter",
+	"parent": [
+		"clarity/archive-feed",
+		"core/columns",
+		"core/column"
+	],
+	"textdomain": "cty",
+	"category": "clarity-blocks",
+	"icon": "filter",
+	"keywords": [
+		"clarity",
+		"feed",
+		"archive",
+		"taxonomy",
+		"meta",
+		"filter"
+	],
+	"supports": {
+		"anchor": true,
+		"align": [
+			"left",
+			"right",
+			"center"
+		],
+		"html": false,
+		"multiple": true
+	},
+	"attributes": {
+		"filterType": {
+			"type": "string",
+			"default": "taxonomy"
+		},
+		"taxonomy": {
+			"type": "string"
+		},
+		"metaKey": {
+			"type": "string"
+		},
+		"metaValues": {
+			"type": "array",
+			"default": []
+		},
+		"customName": {
+			"type": "string"
+		},
+		"customValues": {
+			"type": "array",
+			"default": []
+		},
+		"inputType": {
+			"type": "string"
+		},
+		"alignment": {
+			"type": "string",
+			"default": "horizontal"
+		},
+		"placeholder": {
+			"type": "string",
+			"default": "Filter by"
+		}
+	},
+	"style": "cty-archive-filter-style",
+	"editorStyle": "cty-archive-filter-editor-style",
+	"render": "file:./render.php"
+}

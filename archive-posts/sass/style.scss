@@ -1,0 +1,24 @@
+@import "abstracts/breakpoints";
+
+.cty-archive-posts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--wp--custom--block-gap-inline);
+
+	&:empty {
+		display: none;
+	}
+
+	> * {
+		@media (max-width: $bp-tablet - 1px) {
+			--cty-archive-posts-cols: 2;
+		}
+		@media (max-width: $bp-mobile - 1px) {
+			--cty-archive-posts-cols: 1;
+		}
+		flex-basis: calc(
+			100% / var(--cty-archive-posts-cols) - var(--wp--custom--block-gap-inline) / var(--cty-archive-posts-cols) *
+			(var(--cty-archive-posts-cols) - 1)
+		);
+	}
+}

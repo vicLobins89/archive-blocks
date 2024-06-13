@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "clarity/archive-featured",
+	"apiVersion": 3,
+	"title": "Clarity Archive Featured Posts",
+	"parent": [
+		"clarity/archive-feed",
+		"core/columns",
+		"core/column"
+	],
+	"textdomain": "cty",
+	"category": "clarity-blocks",
+	"icon": "star-filled",
+	"keywords": [
+		"clarity",
+		"feed",
+		"archive",
+		"featured",
+		"posts"
+	],
+	"supports": {
+		"anchor": true,
+		"align": false,
+		"html": false,
+		"multiple": false
+	},
+	"attributes": {
+		"postType": {
+			"type": "string",
+			"default": "post"
+		},
+		"postRest": {
+			"type": "string",
+			"default": "posts"
+		},
+		"featuredPosts": {
+			"type": "array",
+			"default": []
+		},
+		"template": {
+			"type": "string",
+			"default": "partials/card-post-item"
+		}
+	},
+	"style": "cty-archive-featured-style",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,12 @@
+.cty-archive-filter {
+	&__inner {
+		&--button,
+		&--buttons {
+			.cty-archive-filter__inner__input {
+				+ .cty-archive-filter__inner__label {
+					padding: 4px 12px !important;
+				}
+			}
+		}
+	}
+}

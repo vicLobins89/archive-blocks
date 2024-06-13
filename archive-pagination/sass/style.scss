@@ -1,0 +1,27 @@
+.cty-archive-pagination {
+	&__pagination,
+	&__button {
+		display: flex;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+
+		.aligncenter & {
+			align-items: center;
+			justify-content: center;
+		}
+
+		.alignleft & {
+			align-items: center;
+			justify-content: flex-start;
+		}
+
+		.alignright & {
+			align-items: center;
+			justify-content: flex-end;
+		}
+
+		&.is-hidden {
+			display: none;
+		}
+	}
+}
